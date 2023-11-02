@@ -1,0 +1,14 @@
+@import url("./Global.css");
+
+
+main {
+  width: 100%;
+
+body {
+    background: var(--background-primary);
+    color: var(--text);
+}
+  height: 100%;
+    background: var(--background-primary);
+    color: var(--text);
+}

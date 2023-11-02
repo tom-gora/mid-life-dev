@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background-primary: #eeedec;
+    --background-secondary: #bebcbc;
+    --background-opaque: rgba(190, 188, 188, 0.9);
+    --text: #1b1919;
+    --accent-strong: #6841c3;
+    --accent-subtle: #c3b3e7;
+
+    --transition-preset: all 200ms ease-in-out;
+}
+
+.dark {
+    --background-primary: #080c1f;
+    --background-secondary: #11100f;
+    --background-opaque: rgba(17, 16, 15, 0.9);
+    --text: #eeedec;
+}
