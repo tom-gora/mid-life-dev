@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=inter:100,300,400,600,700,900);
+
 *,
 *::after,
 *::before {
@@ -9,6 +11,7 @@
 :root {
     --background-primary: #eeedec;
     --background-secondary: #bebcbc;
+    --shadow-opaque: rgba(17, 16, 15, 0.3);
     --background-opaque: rgba(190, 188, 188, 0.9);
     --text: #1b1919;
     --accent-strong: #6841c3;
@@ -20,6 +23,7 @@
 .dark {
     --background-primary: #080c1f;
     --background-secondary: #11100f;
+    --shadow-opaque: rgba(190, 188, 188, 0.15);
     --background-opaque: rgba(17, 16, 15, 0.9);
     --text: #eeedec;
 }

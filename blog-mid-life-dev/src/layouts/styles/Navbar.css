@@ -1,0 +1,99 @@
+.navigation,
+.navigation-links {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: var(--background-primary);
+}
+
+.navigation .name {
+    background: var(--text);
+    color: var(--background-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.navigation-segment {
+    display: flex;
+}
+
+.navigation-links {
+    gap: 1rem;
+}
+
+.navigation-links a {
+    color: var(--text);
+}
+
+label[for="theme-input"] {
+    margin-left: 2rem;
+    width: 3.7rem;
+    height: 1.75rem;
+    background-color: var(--background-primary);
+    border: 1px solid var(--text);
+    border-radius: 15px;
+    position: relative;
+    padding: 2px;
+    transition: var(--transition-preset);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+}
+
+.dark label[for="theme-input"] {
+    color: var(--background-primary);
+    background: var(--text);
+}
+
+#theme-input {
+    scale: 0;
+}
+
+.toggle-switch {
+    position: absolute;
+    left: 10%;
+    top: 0rem;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    transition: var(--transition-preset);
+}
+
+.dark label[for="theme-input"] .toggle-switch,
+.dark label[for="theme-input"] .toggle-switch {
+    left: -40%;
+}
+
+.navigation-links a {
+    position: relative;
+    color: var(--text);
+    transition: var(--transition-preset);
+}
+.navigation-links a:hover {
+    color: var(--accent-strong);
+}
+
+.navigation-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    width: 0;
+    border-bottom: 1px solid var(--accent-strong);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--transition-preset);
+    transform-origin: center;
+}
+
+.navigation-links a:hover::after {
+    width: 90%;
+}
