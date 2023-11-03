@@ -7,6 +7,7 @@ import SectionSliderRecentPosts from "./layouts/SectionSliderRecentPosts";
 import SectionAllPosts from "./layouts/SectionAllPosts";
 import Post from "./layouts/Post";
 import Footer from "./layouts/Footer";
+import MobileMenuToggle from "./components/MobileMenuToggle";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -41,10 +42,11 @@ const App = () => {
   }, [isDarkMode]);
   return (
     <div className={`main ${isDarkMode ? "dark" : ""} `}>
+      < MobileMenuToggle />
       <Navbar
         toggleDarkMode={toggleDarkMode}
-        showNavigationShadow={showNavigationShadow}
         isDarkMode={isDarkMode}
+        showNavigationShadow={showNavigationShadow}
       />
       <Header />
       <SectionSliderRecentPosts />

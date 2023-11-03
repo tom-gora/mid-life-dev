@@ -1,5 +1,39 @@
-.header__title-section {
-    width: 100dvw;
-    margin-top: 100px;
-    border: 1px solid red;  
+.header__title-wrapper {
+    display: flex;
+    margin-inline: auto;
+    width: 80dvw;
+    margin-top: 92px;
+    border-block: 1px var(--text) solid;
+    padding-inline: 4rem;
+}
+
+@media (width<=600px) {
+    .header__title-wrapper,
+    .header__blog-name{
+        margin-inline: auto;
+        flex-direction: column;
+        white-space: pre-line;
+        text-align: center;
+    }
+
+    .header__title-wrapper {
+        padding-inline: 0;
+    }
+
+}
+
+.header__blog-name,
+.header__svg-wrapper {
+    width: min-content;
+}
+
+.header__blog-name {
+    font-size: 8rem;
+    font-weight: 700;
+}
+
+.header__title-wrapper p {
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-wrap: nowrap;
 }

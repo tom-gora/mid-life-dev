@@ -1,0 +1,38 @@
+label[for="theme-toggle__theme-input"] {
+    margin-left: 2rem;
+    width: 3.7rem;
+    height: 1.75rem;
+    background-color: var(--background-primary);
+    border: 1px solid var(--text);
+    border-radius: 15px;
+    position: relative;
+    padding: 2px;
+    transition: var(--transition-preset);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+}
+
+.dark label[for="theme-toggle__theme-input"] {
+    color: var(--background-primary);
+    background: var(--text);
+}
+
+#theme-toggle__theme-input {
+    scale: 0;
+}
+
+.theme-toggle__toggle-switch {
+    position: absolute;
+    left: 10%;
+    top: 1px;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    transition: var(--transition-preset);
+}
+
+.dark label[for="theme-toggle__theme-input"] .theme-toggle__toggle-switch,
+.dark label[for="theme-toggle__theme-input"] .theme-toggle__toggle-switch {
+    left: -40%;
+}
