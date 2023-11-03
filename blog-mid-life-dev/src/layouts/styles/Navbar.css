@@ -1,11 +1,11 @@
-.navigation,
-.navigation-links {
+.navbar,
+.navbar__links {
     display: flex;
     list-style: none;
     text-decoration: none;
 }
 
-.navigation {
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -15,26 +15,26 @@
     background-color: var(--background-primary);
 }
 
-.navigation .name {
+.navbar .navbar__name {
     background: var(--text);
     color: var(--background-primary);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
 }
 
-.navigation-segment {
+.navbar_right-segment {
     display: flex;
 }
 
-.navigation-links {
+.navbar__links {
     gap: 1rem;
 }
 
-.navigation-links a {
+.navbar__links a {
     color: var(--text);
 }
 
-label[for="theme-input"] {
+label[for="navbar__theme-input"] {
     margin-left: 2rem;
     width: 3.7rem;
     height: 1.75rem;
@@ -49,16 +49,16 @@ label[for="theme-input"] {
     display: flex;
 }
 
-.dark label[for="theme-input"] {
+.dark label[for="navbar__theme-input"] {
     color: var(--background-primary);
     background: var(--text);
 }
 
-#theme-input {
+#navbar__theme-input {
     scale: 0;
 }
 
-.toggle-switch {
+.navbar__toggle-switch {
     position: absolute;
     left: 10%;
     top: 0rem;
@@ -68,21 +68,21 @@ label[for="theme-input"] {
     transition: var(--transition-preset);
 }
 
-.dark label[for="theme-input"] .toggle-switch,
-.dark label[for="theme-input"] .toggle-switch {
+.dark label[for="navbar__theme-input"] .navbar__toggle-switch,
+.dark label[for="navbar__theme-input"] .navbar__toggle-switch {
     left: -40%;
 }
 
-.navigation-links a {
+.navbar__links a {
     position: relative;
     color: var(--text);
     transition: var(--transition-preset);
 }
-.navigation-links a:hover {
+.navbar__links a:hover {
     color: var(--accent-strong);
 }
 
-.navigation-links a::after {
+.navbar__links a::after {
     content: "";
     position: absolute;
     bottom: -0.25rem;
@@ -94,6 +94,6 @@ label[for="theme-input"] {
     transform-origin: center;
 }
 
-.navigation-links a:hover::after {
+.navbar__links a:hover::after {
     width: 90%;
 }

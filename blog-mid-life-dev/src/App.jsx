@@ -24,37 +24,35 @@ const App = () => {
     };
 
     // Attach the scroll event listener when the component mounts.
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Remove the event listener when the component unmounts to avoid memory leaks.
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
+
+  useEffect(() => {
+    document.body.style.background = isDarkMode ? "#080c1f" : "#eeedec";
+  }, [isDarkMode]);
   return (
-    <div className={`main ${isDarkMode ? 'dark' : ''} `}>
-      <Navbar toggleDarkMode={toggleDarkMode} showNavigationShadow={showNavigationShadow} isDarkMode={isDarkMode} />
-      <div style={{ paddingTop: '10rem', minHeight: '1000px', padding: '20px', fontSize: '16px', lineHeight: '1.5', overflowY: 'auto' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod ipsum id mauris ultrices, eget tincidunt tellus auctor. Nullam nec eros nec justo fringilla auctor. Suspendisse potenti. Vivamus eget mauris nec dui blandit ullamcorper. Vestibulum sollicitudin, eros id dignissim vestibulum, augue metus facilisis leo, sit amet fringilla ante quam sit amet dolor.
-
-        // ... (repeat the text as needed to create a long scrollable content)
-
-        Vivamus euismod nulla in mi convallis, quis consequat metus elementum. In non lectus at purus lacinia finibus ac vel mi. In ac efficitur tellus, eget tempor ante. Vestibulum auctor tellus vitae risus bibendum luctus. Sed dignissim libero eu nulla sollicitudin, eu mollis arcu posuere. Sed vestibulum sem at ante condimentum, at feugiat turpis elementum.
-
-      // ... (repeat the text as needed to create a long scrollable content)
-      </div>
-
+    <div className={`main ${isDarkMode ? "dark" : ""} `}>
+      <Navbar
+        toggleDarkMode={toggleDarkMode}
+        showNavigationShadow={showNavigationShadow}
+        isDarkMode={isDarkMode}
+      />
       <Header />
       <SectionSliderRecentPosts />
-      <SectionAllPosts /> w
+      <SectionAllPosts />
       <Post />
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -5,10 +5,10 @@ import { GiPlainCircle } from "react-icons/gi";
 
 const Navbar = ({ isDarkMode, toggleDarkMode, showNavigationShadow }) => {
   return (
-    <div className="navigation" style={showNavigationShadow ? { boxShadow: '0 0 5px var(--shadow-opaque)' } : {}}>
-      <div className="name">Tomasz Gora</div>
-      <div className="navigation-segment">
-        <ul className="navigation-links">
+    <div className="navbar" style={showNavigationShadow ? { boxShadow: '0 0 5px var(--shadow-opaque)' } : {}}>
+      <div className="navbar__name">Tomasz Gora</div>
+      <div className="navbar_right-segment">
+        <ul className="navbar__links">
           <li>
             <a href="#">Home</a>
           </li>
@@ -19,9 +19,9 @@ const Navbar = ({ isDarkMode, toggleDarkMode, showNavigationShadow }) => {
             <a href="#">Projects</a>
           </li>
         </ul>
-        <label htmlFor="theme-input">
-          <input type="checkbox" id="theme-input" checked={isDarkMode} onChange={toggleDarkMode} />
-          <div className="toggle-switch">
+        <label htmlFor="navbar__theme-input">
+          <input type="checkbox" id="navbar__theme-input" checked={isDarkMode} onChange={toggleDarkMode} />
+          <div className="navbar__toggle-switch">
             <div>{<IoSunnyOutline />}</div>
             <div> {<GiPlainCircle />}</div>
             <div>{<IoMoonOutline />}</div>
