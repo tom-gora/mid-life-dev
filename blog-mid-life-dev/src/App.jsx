@@ -12,22 +12,39 @@ import MobileMenuToggle from "./components/MobileMenuToggle";
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showNavigationShadow, setShowNavigationShadow] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth >= 600);
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleMobileMenuOpen = () => {
+    setIsMobileMenuOpen((prevIsMobileMenuOpen) => !prevIsMobileMenuOpen);
+  };
+
+  useEffect(() => {
+    const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+    mobileMenuToggle.addEventListener("click", handleMobileMenuOpen);
+
+    return () =>
+      mobileMenuToggle.removeEventListener("click", handleMobileMenuOpen);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth >= 600);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 20) {
-        // User has scrolled 200 pixels from the top, so show the shadow.
         setShowNavigationShadow(true);
       } else {
-        // User is within the top 200 pixels, so hide the shadow.
         setShowNavigationShadow(false);
       }
     };
-
-    // Attach the scroll event listener when the component mounts.
     window.addEventListener("scroll", handleScroll);
-
-    // Remove the event listener when the component unmounts to avoid memory leaks.
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -42,11 +59,18 @@ const App = () => {
   }, [isDarkMode]);
   return (
     <div className={`main ${isDarkMode ? "dark" : ""} `}>
-      < MobileMenuToggle />
+      {
+        <MobileMenuToggle
+          isMobileMenuOpen={isMobileMenuOpen}
+          isMobileView={isMobileView}
+        />
+      }
       <Navbar
+        isMobileView={isMobileView}
         toggleDarkMode={toggleDarkMode}
         isDarkMode={isDarkMode}
         showNavigationShadow={showNavigationShadow}
+        isMobileMenuOpen={isMobileMenuOpen}
       />
       <Header />
       <SectionSliderRecentPosts />

@@ -1,0 +1,30 @@
+.mobile-menu-toggle {
+    all: unset;
+    position: fixed;
+    bottom: 3rem;
+    right: 0.5rem;
+    width: 2rem;
+    aspect-ratio: 2/2.5;
+    background: var(--text);
+    color: var(--background-primary);
+    font-size: 1.75rem;
+    display: grid;
+    place-items: center;
+    padding: 1rem 0.25rem;
+    border: 2px solid var(--background-secondary);
+    border-radius: 0.5rem;
+    transition: var(--transition-preset);
+  z-index: 100;
+}
+
+.mobile-menu-toggle> * {
+    transition: var(--transition-preset);
+}
+
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus {
+    font-size: 2rem;
+    border: 2px solid var(--accent-subtle);
+    border-radius: 0.5rem;
+    color: var(--accent-subtle);
+}
