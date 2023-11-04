@@ -14,17 +14,26 @@
     border: 2px solid var(--background-secondary);
     border-radius: 0.5rem;
     transition: var(--transition-preset);
-  z-index: 100;
+    z-index: 300;
 }
 
-.mobile-menu-toggle> * {
+.mobile-menu-toggle > * {
     transition: var(--transition-preset);
 }
 
 .mobile-menu-toggle:hover,
-.mobile-menu-toggle:focus {
+.mobile-menu-toggle:focus,
+.mobile-menu-toggle:focus-within {
+    outline: none;
+    box-shadow: none;
     font-size: 2rem;
     border: 2px solid var(--accent-subtle);
     border-radius: 0.5rem;
     color: var(--accent-subtle);
+}
+
+.mobile-menu-toggle:hover > *,
+.mobile-menu-toggle:focus > *,
+.mobile-menu-toggle:focus-within > * {
+    scale: 1.2;
 }

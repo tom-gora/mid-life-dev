@@ -14,7 +14,7 @@
 }
 
 .header__svg-wrapper img {
-    width: clamp(400px, 45vw, 500px);
+    width: clamp(320px, 45vw, 500px);
     margin-left: 3rem;
 }
 
@@ -57,6 +57,6 @@
     }
 
     .header__svg-wrapper img {
-        margin-inline: 0;
+        margin-left: -2rem;
     }
 }
