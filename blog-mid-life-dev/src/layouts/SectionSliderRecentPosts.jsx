@@ -29,38 +29,13 @@ const SectionSliderRecentPosts = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Sequi, omnis.
           </h3>
-          <img
+          <div className="recent-posts__post-image-wrapper"><img
             className="recent-posts__post-image"
             src="https://images.unsplash.com/photo-1696451203476-7ee3bbfc882e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY5OTEwMzAxNw&ixlib=rb-4.0.3&q=80&w=1080"
             alt=""
-          />
+          /></div>
         </div>
 
-        <div className="recent-posts__post">
-          <div className="recent-posts__post-date">22 Sep 2024</div>
-          <h3 className="recent-posts__post-title">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Sequi, omnis.
-          </h3>
-          <img
-            className="recent-posts__post-image"
-            src="https://images.unsplash.com/photo-1696451203476-7ee3bbfc882e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY5OTEwMzAxNw&ixlib=rb-4.0.3&q=80&w=1080"
-            alt=""
-          />
-        </div>
-
-        <div className="recent-posts__post">
-          <div className="recent-posts__post-date">22 Sep 2024</div>
-          <h3 className="recent-posts__post-title">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Sequi, omnis.
-          </h3>
-          <img
-            className="recent-posts__post-image"
-            src="https://images.unsplash.com/photo-1696451203476-7ee3bbfc882e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY5OTEwMzAxNw&ixlib=rb-4.0.3&q=80&w=1080"
-            alt=""
-          />
-        </div>
       </Flickity>
     </div>
   );
