@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./styles/SectionAllPosts.css";
 import { HiOutlineChevronDoubleRight } from "react-icons/hi2";
 import ReactPaginate from "react-paginate";
+import { format } from "date-fns";
 import { TbSquareChevronLeftFilled } from "react-icons/tb";
 import { TbSquareChevronRightFilled } from "react-icons/tb";
 
@@ -11,13 +12,16 @@ const SectionAllPosts = () => {
   const [postsPerPage] = useState(6);
 
   useEffect(() => {
-    // Fetch the JSON data (adjust the URL as needed)
     fetch("mock_data.json")
       .then((response) => response.json())
       .then((data) => {
-        setPosts(data);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
+        const sortedPosts = data.sort((b, a) => {
+          const dateA = new Date(a.publicationDate);
+          const dateB = new Date(b.publicationDate);
+          return dateA - dateB;
+        });
+        setPosts(sortedPosts);
+      }).catch((error) => console.error("Error fetching data:", error));
   }, []);
 
   const handlePageChange = ({ selected }) => {
@@ -38,7 +42,7 @@ const SectionAllPosts = () => {
           <div className="all-posts__post" key={post.id}>
             <div className="all-posts__post-text-wrapper">
               <div className="all-posts__post-date">
-                {post.publicationDate}
+                {format(new Date(post.publicationDate), "dd MMM yyyy")}
               </div>
               <h3 className="all-posts__post-title">
                 {post.title}

@@ -59,6 +59,7 @@ const App = () => {
   }, [isDarkMode]);
   return (
     <div className={`main ${isDarkMode ? "dark" : ""} `}>
+      <div id="top"></div>
       {
         <MobileMenuToggle
           isMobileMenuOpen={isMobileMenuOpen}

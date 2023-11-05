@@ -46,6 +46,11 @@
   font-size:1.5rem;
 }
 
+.all-posts__pagination li:hover,
+.all-posts__pagination li:focus {
+cursor: pointer;
+}
+
 .all-posts__pagination li.previous a,
 .all-posts__pagination li.next a{
 color: var(--accent-strong);
