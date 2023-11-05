@@ -31,7 +31,7 @@ const SectionSliderRecentPosts = () => {
           </h3>
           <div className="recent-posts__post-image-wrapper"><img
             className="recent-posts__post-image"
-            src="https://images.unsplash.com/photo-1696451203476-7ee3bbfc882e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY5OTEwMzAxNw&ixlib=rb-4.0.3&q=80&w=1080"
+            src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           /></div>
         </div>

@@ -85,7 +85,7 @@
     "title": "Exploring Modern Web Development Tools",
     "publicationDate": "2023-02-27",
     "intro": "Stay up to date with the latest web tools",
-    "content": "The field of web development evolves quickly, and modern tools can significantly enhance productivity. In this blog post[201~[200~, we'll explore a variety of modern web development tools and their benefits.",
+    "content": "The field of web development evolves quickly, and modern tools can significantly enhance productivity. In this blog post, we'll explore a variety of modern web development tools and their benefits.",
     "featuredImage": "image9.jpg",
     "status": "published"
   },
@@ -100,103 +100,103 @@
     "status": "published"
   },
   {
-      "id": 11,
-      "author": "Lucas Anderson",
-      "title": "Getting Started with React Native",
-      "publicationDate": "2023-11-20",
-      "intro": "Build mobile apps with React Native",
-      "content": "React Native is a popular framework for building mobile applications using the same codebase as React. In this blog post, you'll learn how to get started with React Native and create your first mobile app.",
-      "featuredImage": "image11.jpg",
-      "status": "published"
-    },
-    {
-      "id": 12,
-      "author": "Sophie Turner",
-      "title": "Web Security Best Practices",
-      "publicationDate": "2023-10-10",
-      "intro": "Protect your web applications from threats",
-      "content": "Ensuring the security of web applications is vital to protect user data and prevent cyberattacks. This blog post covers web security best practices and techniques to safeguard your web applications.",
-      "featuredImage": "image12.jpg",
-      "status": "published"
-    },
-    {
-      "id": 13,
-      "author": "Daniel White",
-      "title": "Mastering CSS Grid Layout",
-      "publicationDate": "2023-09-05",
-      "intro": "Create responsive layouts with CSS Grid",
-      "content": "CSS Grid Layout is a powerful tool for creating responsive and flexible web layouts. This blog post provides an in-depth guide to mastering CSS Grid and using it to design complex web layouts.",
-      "featuredImage": "image13.jpg",
-      "status": "published"
-    },
-    {
-      "id": 14,
-      "author": "Ava Parker",
-      "title": "Effective UI/UX Design Principles",
-      "publicationDate": "2023-08-18",
-      "intro": "Design user-friendly interfaces",
-      "content": "User Interface (UI) and User Experience (UX) design are critical for creating user-friendly websites and applications. This blog post explores effective UI/UX design principles and best practices.",
-      "featuredImage": "image14.jpg",
-      "status": "published"
-    },
-    {
-      "id": 15,
-      "author": "Benjamin Martin",
-      "title": "Introduction to Machine Learning",
-      "publicationDate": "2023-07-03",
-      "intro": "Explore the world of machine learning",
-      "content": "Machine learning is a fascinating field that enables computers to learn and make predictions from data. This blog post introduces you to the basics of machine learning and its applications.",
-      "featuredImage": "image15.jpg",
-      "status": "published"
-    },
-    {
-      "id": 16,
-      "author": "Grace Rodriguez",
-      "title": "Front-End Development Tips",
-      "publicationDate": "2023-06-16",
-      "intro": "Improve your front-end development skills",
-      "content": "Front-end development is constantly evolving, and staying updated with the latest trends and tools is essential. This blog post provides valuable tips for front-end developers to enhance their skills.",
-      "featuredImage": "image16.jpg",
-      "status": "published"
-    },
-    {
-      "id": 17,
-      "author": "William Davis",
-      "title": "Introduction to Cryptocurrency",
-      "publicationDate": "2023-05-30",
-      "intro": "Discover the world of digital currency",
-      "content": "Cryptocurrency has gained popularity as a digital form of currency and investment. In this blog post, you'll get an introduction to cryptocurrency, its underlying technology, and its impact on finance.",
-      "featuredImage": "image17.jpg",
-      "status": "published"
-    },
-    {
-      "id": 18,
-      "author": "Lily Robinson",
-      "title": "Effective Content Marketing Strategies",
-      "publicationDate": "2023-04-14",
-      "intro": "Boost your online presence with content marketing",
-      "content": "Content marketing is a powerful strategy for increasing brand visibility and engaging with your audience. This blog post offers effective content marketing strategies and tips for success.",
-      "featuredImage": "image18.jpg",
-      "status": "published"
-    },
-    {
-      "id": 19,
-      "author": "David Harris",
-      "title": "Introduction to Cybersecurity",
-      "publicationDate": "2023-03-27",
-      "intro": "Enhance your knowledge of cybersecurity",
-      "content": "Cybersecurity is essential for protecting digital assets and preventing security breaches. This blog post provides[201~[200~ an introduction to the world of cybersecurity and explores key concepts and practices.",
-      "featuredImage": "image19.jpg",
-      "status": "published"
-    },
-    {
-      "id": 20,
-      "author": "Nora Foster",
-      "title": "Effective Project Management Techniques",
-      "publicationDate": "2023-02-10",
-      "intro": "Manage projects with efficiency and success",
-      "content": "Project management is a crucial skill for overseeing tasks and ensuring projects are completed on time and within budget. This blog post shares effective project management techniques and strategies for success.",
-      "featuredImage": "image20.jpg",
-      "status": "published"
-    }
+    "id": 11,
+    "author": "Lucas Anderson",
+    "title": "Getting Started with React Native",
+    "publicationDate": "2023-11-20",
+    "intro": "Build mobile apps with React Native",
+    "content": "React Native is a popular framework for building mobile applications using the same codebase as React. In this blog post, you'll learn how to get started with React Native and create your first mobile app.",
+    "featuredImage": "image11.jpg",
+    "status": "published"
+  },
+  {
+    "id": 12,
+    "author": "Sophie Turner",
+    "title": "Web Security Best Practices",
+    "publicationDate": "2023-10-10",
+    "intro": "Protect your web applications from threats",
+    "content": "Ensuring the security of web applications is vital to protect user data and prevent cyberattacks. This blog post covers web security best practices and techniques to safeguard your web applications.",
+    "featuredImage": "image12.jpg",
+    "status": "published"
+  },
+  {
+    "id": 13,
+    "author": "Daniel White",
+    "title": "Mastering CSS Grid Layout",
+    "publicationDate": "2023-09-05",
+    "intro": "Create responsive layouts with CSS Grid",
+    "content": "CSS Grid Layout is a powerful tool for creating responsive and flexible web layouts. This blog post provides an in-depth guide to mastering CSS Grid and using it to design complex web layouts.",
+    "featuredImage": "image13.jpg",
+    "status": "published"
+  },
+  {
+    "id": 14,
+    "author": "Ava Parker",
+    "title": "Effective UI/UX Design Principles",
+    "publicationDate": "2023-08-18",
+    "intro": "Design user-friendly interfaces",
+    "content": "User Interface (UI) and User Experience (UX) design are critical for creating user-friendly websites and applications. This blog post explores effective UI/UX design principles and best practices.",
+    "featuredImage": "image14.jpg",
+    "status": "published"
+  },
+  {
+    "id": 15,
+    "author": "Benjamin Martin",
+    "title": "Introduction to Machine Learning",
+    "publicationDate": "2023-07-03",
+    "intro": "Explore the world of machine learning",
+    "content": "Machine learning is a fascinating field that enables computers to learn and make predictions from data. This blog post introduces you to the basics of machine learning and its applications.",
+    "featuredImage": "image15.jpg",
+    "status": "published"
+  },
+  {
+    "id": 16,
+    "author": "Grace Rodriguez",
+    "title": "Front-End Development Tips",
+    "publicationDate": "2023-06-16",
+    "intro": "Improve your front-end development skills",
+    "content": "Front-end development is constantly evolving, and staying updated with the latest trends and tools is essential. This blog post provides valuable tips for front-end developers to enhance their skills.",
+    "featuredImage": "image16.jpg",
+    "status": "published"
+  },
+  {
+    "id": 17,
+    "author": "William Davis",
+    "title": "Introduction to Cryptocurrency",
+    "publicationDate": "2023-05-30",
+    "intro": "Discover the world of digital currency",
+    "content": "Cryptocurrency has gained popularity as a digital form of currency and investment. In this blog post, you'll get an introduction to cryptocurrency, its underlying technology, and its impact on finance.",
+    "featuredImage": "image17.jpg",
+    "status": "published"
+  },
+  {
+    "id": 18,
+    "author": "Lily Robinson",
+    "title": "Effective Content Marketing Strategies",
+    "publicationDate": "2023-04-14",
+    "intro": "Boost your online presence with content marketing",
+    "content": "Content marketing is a powerful strategy for increasing brand visibility and engaging with your audience. This blog post offers effective content marketing strategies and tips for success.",
+    "featuredImage": "image18.jpg",
+    "status": "published"
+  },
+  {
+    "id": 19,
+    "author": "David Harris",
+    "title": "Introduction to Cybersecurity",
+    "publicationDate": "2023-03-27",
+    "intro": "Enhance your knowledge of cybersecurity",
+    "content": "Cybersecurity is essential for protecting digital assets and preventing security breaches. This blog post provides an introduction to the world of cybersecurity and explores key concepts and practices.",
+    "featuredImage": "image19.jpg",
+    "status": "published"
+  },
+  {
+    "id": 20,
+    "author": "Nora Foster",
+    "title": "Effective Project Management Techniques",
+    "publicationDate": "2023-02-10",
+    "intro": "Manage projects with efficiency and success",
+    "content": "Project management is a crucial skill for overseeing tasks and ensuring projects are completed on time and within budget. This blog post shares effective project management techniques and strategies for success.",
+    "featuredImage": "image20.jpg",
+    "status": "published"
+  }
 ]

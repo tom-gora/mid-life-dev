@@ -36,6 +36,57 @@
   color: var(--accent-strong);
 }
 
+.all-posts__pagination {
+  margin-block: 2rem;
+  width: min-content;
+  margin-inline: auto;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  font-size:1.5rem;
+}
+
+.all-posts__pagination li.previous a,
+.all-posts__pagination li.next a{
+color: var(--accent-strong);
+}
+
+.all-posts__pagination li.previous,
+.all-posts__pagination li.next {
+transition: var(--transition-preset);
+}
+
+.all-posts__pagination li.previous:focus,
+.all-posts__pagination li.next:focus,
+.all-posts__pagination li.previous:hover,
+.all-posts__pagination li.next:hover{
+scale: 1.2 ;
+}
+
+.all-posts__pagination a {
+  color: var(--text);
+}
+
+.all-posts__pagination li:focus a,
+.all-posts__pagination li:hover a {
+  color: var(--accent-strong);
+}
+
+.all-posts__pagination li.pagination-active-page {
+  background: var(--accent-subtle) !important;
+}
+
+.all-posts__pagination li:not(:first-child):not(:last-child) {
+  margin-top: 4px;
+  width: 2rem;
+  height: 2rem;
+  background:var(--background-secondary);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (width> 900px) {
   .all-posts__post {
     display: grid;
@@ -71,6 +122,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr;
     column-gap: 4rem;
+    max-width: 80vw;
+    margin: auto;
   }
   .all-posts__section_header {
     grid-column: span 2;
