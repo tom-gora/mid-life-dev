@@ -86,6 +86,11 @@
     background: var(--accent-subtle) !important;
 }
 
+.dark .all-posts__pagination li.pagination-active-page a{
+  color: var(--background-secondary) !important;
+}
+
+
 .all-posts__pagination li:not(:first-child):not(:last-child) {
     margin-top: 4px;
     width: 2rem;

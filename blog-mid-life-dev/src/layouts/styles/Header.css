@@ -18,6 +18,10 @@
     margin-left: 3rem;
 }
 
+.header__title {
+    width: max-content;
+}
+
 .header__blog-name,
 .header__svg-wrapper {
     width: min-content;
@@ -31,7 +35,13 @@
 .header__title-wrapper p {
     font-weight: 600;
     font-size: 1.7rem;
-    text-wrap: nowrap;
+    white-space: nowrap;
+}
+
+@media (width <= 600px) {
+    .header__title-wrapper {
+        margin-top: 2rem;
+    }
 }
 
 @media (width<=900px) {
@@ -45,7 +55,6 @@
     }
 
     .header__title-wrapper {
-        margin-top: 2rem;
         padding-inline: 0;
     }
 
@@ -56,7 +65,8 @@
         margin-bottom: 1rem;
     }
 
-    .header__svg-wrapper img {
-        margin-left: -2rem;
+    .header__svg-wrapper img,
+    .header__title{
+        margin: auto;
     }
 }

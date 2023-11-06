@@ -14,9 +14,9 @@ const ThemeToggle = ({ toggleDarkMode, isDarkMode }) => {
         onChange={toggleDarkMode}
       />
       <div className="theme-toggle__toggle-switch">
-        <div>{<IoSunnyOutline />}</div>
-        <div> {<GiPlainCircle />}</div>
         <div>{<IoMoonOutline />}</div>
+        <div> {<GiPlainCircle />}</div>
+        <div>{<IoSunnyOutline />}</div>
       </div>
     </label>
   );

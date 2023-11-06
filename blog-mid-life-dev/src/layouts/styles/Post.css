@@ -27,6 +27,10 @@
     margin-bottom: 1rem;
 }
 
+.dark .post__post-content {
+  color: var(--background-primary);
+}
+
 .post__post-author {
     color: var(--accent-strong);
     margin-block: 1rem;
