@@ -13,8 +13,8 @@ const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showNavigationShadow, setShowNavigationShadow] = useState(false);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth >= 600);
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showPost, setShowPost] = useState(false);
 
   const handleMobileMenuOpen = () => {
     setIsMobileMenuOpen((prevIsMobileMenuOpen) => !prevIsMobileMenuOpen);
@@ -57,6 +57,11 @@ const App = () => {
   useEffect(() => {
     document.body.style.background = isDarkMode ? "#080c1f" : "#eeedec";
   }, [isDarkMode]);
+
+  const handlePostClick = () => {
+    setShowPost((prevShowPost) => !prevShowPost);
+  };
+
   return (
     <div className={`main ${isDarkMode ? "dark" : ""} `}>
       <div id="top"></div>
@@ -73,10 +78,10 @@ const App = () => {
         showNavigationShadow={showNavigationShadow}
         isMobileMenuOpen={isMobileMenuOpen}
       />
-      <Header />
-      <SectionSliderRecentPosts />
-      <SectionAllPosts />
-      <Post />
+      {showPost ? null : <Header />}
+      {showPost ? null : <SectionSliderRecentPosts />}
+      {showPost ? null : <SectionAllPosts onLinkClick={handlePostClick} />}
+      {showPost ? <Post onLinkClick={handlePostClick} /> : null}
       <Footer />
     </div>
   );

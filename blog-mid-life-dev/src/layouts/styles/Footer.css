@@ -8,6 +8,7 @@
 
 .footer p:first-of-type {
   font-weight: bold;
+  margin-inline: 1rem;
 }
 
 .footer__links {

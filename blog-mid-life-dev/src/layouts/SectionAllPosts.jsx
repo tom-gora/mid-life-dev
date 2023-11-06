@@ -6,7 +6,7 @@ import { format } from "date-fns";
 import { TbSquareChevronLeftFilled } from "react-icons/tb";
 import { TbSquareChevronRightFilled } from "react-icons/tb";
 
-const SectionAllPosts = () => {
+const SectionAllPosts = ({ onLinkClick }) => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [postsPerPage] = useState(6);
@@ -21,8 +21,13 @@ const SectionAllPosts = () => {
           return dateA - dateB;
         });
         setPosts(sortedPosts);
-      }).catch((error) => console.error("Error fetching data:", error));
+      })
+      .catch((error) => console.error("Error fetching data:", error));
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, document.body.scrollHeight);
+  }, [currentPage]);
 
   const handlePageChange = ({ selected }) => {
     setCurrentPage(selected);
@@ -33,6 +38,7 @@ const SectionAllPosts = () => {
     (currentPage + 1) * postsPerPage
   );
 
+
   return (
     <>
       <div className="all-posts">
@@ -42,7 +48,10 @@ const SectionAllPosts = () => {
           <div className="all-posts__post" key={post.id}>
             <div className="all-posts__post-text-wrapper">
               <div className="all-posts__post-date">
-                {format(new Date(post.publicationDate), "dd MMM yyyy")}
+                {format(
+                  new Date(post.publicationDate),
+                  "dd MMM yyyy"
+                )}
               </div>
               <h3 className="all-posts__post-title">
                 {post.title}
@@ -58,7 +67,7 @@ const SectionAllPosts = () => {
                 alt=""
               />
             </div>
-            <a href="#">
+            <a href="#" onClick={() => onLinkClick()}>
               Read More {<HiOutlineChevronDoubleRight />}
             </a>
           </div>
