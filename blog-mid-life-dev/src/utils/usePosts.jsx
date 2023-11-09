@@ -7,8 +7,9 @@ export const PostProvider = ({ children }) => {
   useEffect(() => {
     const postsStrapiEndpoint = "https://admin.tomgora.online/api/posts";
     const token = import.meta.env.VITE_REACT_APP_STRAPI_TOKEN;
+    console.log("Token:", token);
     const headers = {
-      Authorization: `bearer ${token}`,
+      Authorization: `Bearer ${token}`,
     };
 
     fetch(postsStrapiEndpoint, { headers })

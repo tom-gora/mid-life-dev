@@ -24,7 +24,7 @@ const Navbar = ({
       <div className="navbar_right-segment">
         <ul className="navbar__links">
           <li>
-            <a href="/">Home</a>
+            <a href="https://tomgora.online/blog">Home</a>
           </li>
           <li>
             <a
