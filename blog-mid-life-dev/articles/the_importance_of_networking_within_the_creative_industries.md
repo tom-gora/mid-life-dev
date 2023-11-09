@@ -11,7 +11,7 @@ According to Merriam-Webster, networking is “the exchange of information or se
 Networking is especially important in the creative industries, as it helps you advance your career more effectively and efficiently, by allowing you to access opportunities, showcase your work and build vital relationships.
 
 ### Networking for web developers
-![tech conference](http://151.236.217.189:1337/uploads/tech_conference_62be279167.jpg)
+![tech conference](https://admin.tomgora.online/uploads/tech_conference_62be279167.jpg)
 
 As a web developer, I believe that networking is not only a desirable skill, but also a necessary one, for the success and reputation of my career and the industry. Web development is a complex and dynamic field that involves creating, designing, and maintaining websites and web applications, using various technologies, tools, and languages. Web development also requires working with different clients, users, and stakeholders, who have different needs, preferences, and expectations. Therefore, web development poses some specific challenges and opportunities for networking, such as:
 
@@ -21,7 +21,7 @@ As a web developer, I believe that networking is not only a desirable skill, but
 
 ### How to network effectively?
 
-![linkedin meme](http://151.236.217.189:1337/uploads/linkedin_meme_7d41edd67d.png)
+![linkedin meme](https://admin.tomgora.online/uploads/linkedin_meme_7d41edd67d.png)
 Considering how important networking is for web developers, let’s figure out how we can network effectively and efficiently. There are many ways and platforms to network, both online and offline, such as:
 - LinkedIn: LinkedIn is a popular and powerful online platform for professional networking, where you can create and update your profile, showcase your work and skills, connect with other professionals, join groups and communities, follow influencers and organizations, and search and apply for jobs.
 - Meetup groups: Meetup groups are local and informal gatherings of people who share similar or complementary interests, passions, or hobbies, where you can attend talks, presentations, discussions, and social activities, and meet and interact with other like-minded people.

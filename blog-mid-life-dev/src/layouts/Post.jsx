@@ -7,7 +7,6 @@ import { HiOutlineChevronDoubleLeft } from "react-icons/hi2";
 
 const Post = ({ onLinkClick, selectedPostId }) => {
   const { posts } = usePosts();
-  console.log(selectedPostId);
 
   const post = posts.find((post) => post.id === selectedPostId);
 

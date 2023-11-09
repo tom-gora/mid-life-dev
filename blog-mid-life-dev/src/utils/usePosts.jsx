@@ -14,7 +14,6 @@ export const PostProvider = ({ children }) => {
     fetch(postsStrapiEndpoint, { headers })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
         const postData = data.data;
         const formattedPosts = postData.map((post) => {
           const { id, attributes } = post;
