@@ -17,6 +17,7 @@ const App = () => {
   const [isMobileView, setIsMobileView] = useState(window.innerWidth >= 600);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showPost, setShowPost] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
 
   const handleMobileMenuOpen = () => {
     setIsMobileMenuOpen((prevIsMobileMenuOpen) => !prevIsMobileMenuOpen);
@@ -62,7 +63,6 @@ const App = () => {
 
   const [selectedPostId, setSelectedPostId] = useState(null);
 
-
   const handlePostClick = (postId) => {
     setSelectedPostId(postId);
     setShowPost((prevShowPost) => !prevShowPost);
@@ -83,16 +83,40 @@ const App = () => {
         isDarkMode={isDarkMode}
         showNavigationShadow={showNavigationShadow}
         isMobileMenuOpen={isMobileMenuOpen}
+        onAboutClick={() =>
+          setShowAbout((prevShowAbout) => !prevShowAbout)
+        }
+        showAbout={showAbout}
       />
       <PostProvider>
         {showPost ? null : <Header />}
-        {showPost ? null : <SectionSliderRecentPosts />}
-        {showPost ? null : (
-          <SectionAllPosts onLinkClick={(postId) => handlePostClick(postId)} />
+        {showAbout ? (
+          <About
+            onAboutClick={() =>
+              setShowAbout((prevShowAbout) => !prevShowAbout)
+            }
+            showAbout={showAbout}
+          />
+        ) : null}
+        {showAbout ? null : (
+          <>
+            {showPost ? null : <SectionSliderRecentPosts />}
+            {showPost ? null : (
+              <SectionAllPosts
+                onLinkClick={(postId) =>
+                  handlePostClick(postId)
+                }
+              />
+            )}
+            {showPost ? (
+              <Post
+                selectedPostId={selectedPostId}
+                onLinkClick={handlePostClick}
+              />
+            ) : null}
+          </>
         )}
-        {showPost ? <Post selectedPostId={selectedPostId} onLinkClick={handlePostClick} /> : null}
       </PostProvider>
-      <About />
       <Footer />
     </div>
   );

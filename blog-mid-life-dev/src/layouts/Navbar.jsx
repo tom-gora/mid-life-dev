@@ -7,6 +7,8 @@ const Navbar = ({
   toggleDarkMode,
   showNavigationShadow,
   isMobileMenuOpen,
+  onAboutClick,
+  showAbout,
 }) => {
   return (
     <div
@@ -25,7 +27,12 @@ const Navbar = ({
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a
+              href="#"
+              onClick={() => !showAbout && onAboutClick()}
+            >
+              About
+            </a>
           </li>
           <li>
             <a href="https://tomgora.online">Projects</a>
