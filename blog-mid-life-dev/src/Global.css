@@ -9,6 +9,7 @@
 }
 
 :root {
+    font-size: 18px;
     --background-primary: #eeedec;
     --background-secondary: #bebcbc;
     --shadow-opaque: rgba(17, 16, 15, 0.3);

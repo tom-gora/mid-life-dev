@@ -26,6 +26,9 @@ dist-ssr
 node_modules
 *.log
 
+# env vars definitions
+.env
+
 # Output directory
 dist
 

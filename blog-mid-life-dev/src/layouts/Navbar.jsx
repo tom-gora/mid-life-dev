@@ -22,13 +22,13 @@ const Navbar = ({
       <div className="navbar_right-segment">
         <ul className="navbar__links">
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
             <a href="#">About</a>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <a href="https://tomgora.online">Projects</a>
           </li>
         </ul>
         <ThemeToggle

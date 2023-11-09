@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { usePosts } from "../utils/usePosts";
 import "./styles/SectionAllPosts.css";
 import { HiOutlineChevronDoubleRight } from "react-icons/hi2";
 import ReactPaginate from "react-paginate";
@@ -7,23 +8,10 @@ import { TbSquareChevronLeftFilled } from "react-icons/tb";
 import { TbSquareChevronRightFilled } from "react-icons/tb";
 
 const SectionAllPosts = ({ onLinkClick }) => {
-  const [posts, setPosts] = useState([]);
+  const { posts } = usePosts();
   const [currentPage, setCurrentPage] = useState(0);
-  const [postsPerPage] = useState(6);
+  const [postsPerPage] = useState(4);
 
-  useEffect(() => {
-    fetch("mock_data.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const sortedPosts = data.sort((b, a) => {
-          const dateA = new Date(a.publicationDate);
-          const dateB = new Date(b.publicationDate);
-          return dateA - dateB;
-        });
-        setPosts(sortedPosts);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
 
   useEffect(() => {
     window.scrollTo(0, document.body.scrollHeight);
@@ -37,7 +25,6 @@ const SectionAllPosts = ({ onLinkClick }) => {
     currentPage * postsPerPage,
     (currentPage + 1) * postsPerPage
   );
-
 
   return (
     <>
@@ -63,11 +50,11 @@ const SectionAllPosts = ({ onLinkClick }) => {
             <div className="all-posts__post-image-wrapper">
               <img
                 className="all-posts__post-image"
-                src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={post.imageURL}
                 alt=""
               />
             </div>
-            <a href="#" onClick={() => onLinkClick()}>
+            <a href="#" onClick={() => onLinkClick(post.id)}>
               Read More {<HiOutlineChevronDoubleRight />}
             </a>
           </div>

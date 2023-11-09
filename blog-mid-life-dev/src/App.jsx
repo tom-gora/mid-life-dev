@@ -1,6 +1,7 @@
 import "./App.css";
 
 import { useState, useEffect } from "react";
+import { PostProvider } from "./utils/usePosts";
 import Navbar from "./layouts/Navbar";
 import Header from "./layouts/Header";
 import SectionSliderRecentPosts from "./layouts/SectionSliderRecentPosts";
@@ -58,7 +59,11 @@ const App = () => {
     document.body.style.background = isDarkMode ? "#080c1f" : "#eeedec";
   }, [isDarkMode]);
 
-  const handlePostClick = () => {
+  const [selectedPostId, setSelectedPostId] = useState(null);
+
+
+  const handlePostClick = (postId) => {
+    setSelectedPostId(postId);
     setShowPost((prevShowPost) => !prevShowPost);
   };
 
@@ -78,10 +83,14 @@ const App = () => {
         showNavigationShadow={showNavigationShadow}
         isMobileMenuOpen={isMobileMenuOpen}
       />
-      {showPost ? null : <Header />}
-      {showPost ? null : <SectionSliderRecentPosts />}
-      {showPost ? null : <SectionAllPosts onLinkClick={handlePostClick} />}
-      {showPost ? <Post onLinkClick={handlePostClick} /> : null}
+      <PostProvider>
+        {showPost ? null : <Header />}
+        {showPost ? null : <SectionSliderRecentPosts />}
+        {showPost ? null : (
+          <SectionAllPosts onLinkClick={(postId) => handlePostClick(postId)} />
+        )}
+        {showPost ? <Post selectedPostId={selectedPostId} onLinkClick={handlePostClick} /> : null}
+      </PostProvider>
       <Footer />
     </div>
   );
