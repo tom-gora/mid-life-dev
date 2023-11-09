@@ -7,6 +7,7 @@ import Header from "./layouts/Header";
 import SectionSliderRecentPosts from "./layouts/SectionSliderRecentPosts";
 import SectionAllPosts from "./layouts/SectionAllPosts";
 import Post from "./layouts/Post";
+import About from "./layouts/About";
 import Footer from "./layouts/Footer";
 import MobileMenuToggle from "./components/MobileMenuToggle";
 
@@ -91,6 +92,7 @@ const App = () => {
         )}
         {showPost ? <Post selectedPostId={selectedPostId} onLinkClick={handlePostClick} /> : null}
       </PostProvider>
+      <About />
       <Footer />
     </div>
   );

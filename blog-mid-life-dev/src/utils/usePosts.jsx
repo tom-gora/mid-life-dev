@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from "react";
 
 const PostContext = createContext();
 
@@ -29,7 +29,6 @@ export const PostProvider = ({ children }) => {
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
-
 
   return (
     <PostContext.Provider value={{ posts, setPosts }}>

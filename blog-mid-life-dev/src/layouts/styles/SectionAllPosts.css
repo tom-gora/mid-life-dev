@@ -34,7 +34,15 @@
     justify-self: start;
     margin-right: 3rem;
     color: var(--accent-strong);
+    transition: var(--transition-preset);
 }
+
+.all-posts__post a:hover,
+.all-posts__post a:focus {
+    color: var(--accent-strong);
+    font-weight: 700;
+}
+
 
 .all-posts__pagination {
     margin-block: 2rem;
