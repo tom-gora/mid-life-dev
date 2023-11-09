@@ -5,7 +5,7 @@ const PostContext = createContext();
 export const PostProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    const postsStrapiEndpoint = "http://localhost:1337/api/posts";
+    const postsStrapiEndpoint = "https://admin.tomgora.online/api/posts";
     const token = import.meta.env.VITE_REACT_APP_STRAPI_TOKEN;
     const headers = {
       Authorization: `bearer ${token}`,
@@ -14,6 +14,7 @@ export const PostProvider = ({ children }) => {
     fetch(postsStrapiEndpoint, { headers })
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
         const postData = data.data;
         const formattedPosts = postData.map((post) => {
           const { id, attributes } = post;

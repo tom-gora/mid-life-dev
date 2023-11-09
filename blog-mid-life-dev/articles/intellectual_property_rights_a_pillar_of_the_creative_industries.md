@@ -2,7 +2,7 @@ Intellectual Property (IP) rights are legal protections granted to creators for 
 
 ### __But what are Intellectual Property rights?__
 IP rights can be broadly classified into four categories: Copyright, Trademark, Patent, and Trade Secrets. These rights collectively safeguard a creator’s work from being stolen, copied, or resold under a different name.
-![copyright_countries](http://localhost:1337/uploads/copyright_countries_4944b304e7.jpg)
+![copyright_countries](http://151.236.217.189:1337/uploads/copyright_countries_4944b304e7.jpg)
 Copyright provides legal rights to creators, allowing them control over their work and its usage. This includes exclusive rights to distribute, copy, reproduce, and license their work. Trademark refers to a product or service-identifying label used to distinguish your products or services from others. This label could be a word, a name, a picture, or a symbol. Patent grants exclusive rights to an invention. This invention could be a product, a process for creating this product, or a new method of creating other products that diverge from common methods. Patents prevent others from making, using, or selling your invention. Trade Secrets encompass information that gives a company or business a competitive advantage over others in the field. This could be a design process, a device, or trade figures.
 
 
@@ -14,7 +14,7 @@ Consider the perspective of a web development agency owner. Having IP rights is 
 ### __What lies ahead and why it is challenges?__
 As the internet and the creative industries continue to grow rapidly, it becomes increasingly challenging to develop something new as almost everything has already been done. However, IP rights remain crucial. Hopefully, less stringent rules will still allow people to draw inspiration from others’ work and develop their own versions.
 
-![artstation_ai](http://localhost:1337/uploads/artstation_ai_88d53a7605.jpg)
+![artstation_ai](http://151.236.217.189:1337/uploads/artstation_ai_88d53a7605.jpg)
 The rapid spread of generative AI presents new challenges and opportunities for IP rights. As AI becomes more capable of creating content, questions arise about who owns the rights to AI-generated creations. This is a complex issue that will require careful consideration and potentially new legislation to ensure that IP rights continue to protect creators without stifling innovation.  
 
 

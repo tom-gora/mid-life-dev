@@ -3,7 +3,7 @@ The creative industries are a diverse and dynamic sector that encompasses a wide
 But what does it mean to be professional in the creative industries? How can web developers, who are one of the key players in the digital creative sector, exhibit professionalism in their practice and conduct? In this blog post, I will explore these questions and discuss some of the aspects and principles of professionalism that apply to web developers.
 
 ### __What is professionalism?__
-![professional man](http://localhost:1337/uploads/professional_person_60b3ba377d.jpg)
+![professional man](http://151.236.217.189:1337/uploads/professional_person_60b3ba377d.jpg)
 
 Professionalism means the conduct, aims, or qualities that characterize or mark a profession or a professional person. Professionalism is not a fixed or universal concept, but rather a context-dependent and dynamic one, that varies across different professions, cultures, and situations. However, there are some common elements and indicators of professionalism that can be identified, such as:
 - Knowledge and skills: A professional has a high level of expertise and competence in their field of work, acquired through education, training, and experience. A professional also keeps their knowledge and skills up-to-date and relevant, by engaging in continuous learning and development.
@@ -13,7 +13,7 @@ Professionalism means the conduct, aims, or qualities that characterize or mark 
 - Attitude and behavior: A professional demonstrates a positive and professional attitude and behavior, such as confidence, enthusiasm, initiative, and creativity. A professional also shows respect, courtesy, and professionalism, such as punctuality, reliability, and accountability.
 
 ### Professionalism for web developers
-![professional desk](http://localhost:1337/uploads/professional_desk_08960c88a1.jpg)
+![professional desk](http://151.236.217.189:1337/uploads/professional_desk_08960c88a1.jpg)
 
 As a web developer, I believe that professionalism is not only a desirable quality, but also a necessary one, for the success and reputation of my career and the industry. Web development is a complex and dynamic field that involves creating, designing, and maintaining websites and web applications, using various technologies, tools, and languages. Web development also requires working with different clients, users, and stakeholders, who have different needs, preferences, and expectations. Therefore, web development poses some specific challenges and opportunities for professionalism, such as:
 

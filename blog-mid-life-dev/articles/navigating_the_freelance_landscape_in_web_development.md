@@ -1,6 +1,6 @@
 The creative industry, particularly web development, has seen a surge in freelancing over the years. Many web developers are choosing to work independently, leveraging their skills to create unique digital experiences for a diverse range of clients. This shift towards freelancing has been driven by several factors, including the desire for flexibility, autonomy, and the potential for higher earnings. However, freelancing also comes with its own set of challenges.
 
-![freelancer meme](https://legiit-blog.s3.amazonaws.com/2c03f31172c81e00c993cf4608d7a707.jpeg)
+![freelancer meme](http://151.236.217.189:1337/uploads/not_sure_if_frelancer_a9e919984a.jpeg)
 ### __The Perks of Freelancing__
 
 Freelancing offers several advantages that are attractive to web developers:
