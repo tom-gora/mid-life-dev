@@ -21,8 +21,18 @@
 }
 
 .recent-posts__post a {
+    display: grid;
+    place-items: center;
     color: var(--text);
+    transition: var(--transition-preset);
 }
+
+.recent-posts__post a:hover,
+.recent-posts__post a:focus{
+    cursor: pointer;
+    color: var(--accent-strong);
+}
+
 
 .recent-posts__post-image-wrapper {
     width: 90%;
