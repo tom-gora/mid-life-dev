@@ -100,7 +100,10 @@ const App = () => {
         ) : null}
         {showAbout ? null : (
           <>
-            {showPost ? null : <SectionSliderRecentPosts />}
+            {showPost ? null : <SectionSliderRecentPosts
+              onLinkClick={(postId) =>
+                handlePostClick(postId)
+              } />}
             {showPost ? null : (
               <SectionAllPosts
                 onLinkClick={(postId) =>

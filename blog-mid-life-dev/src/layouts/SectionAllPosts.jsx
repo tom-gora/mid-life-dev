@@ -40,14 +40,14 @@ const SectionAllPosts = ({ onLinkClick }) => {
                   "dd MMM yyyy"
                 )}
               </div>
-              <h3 className="all-posts__post-title">
+              <h3 className="all-posts__post-title" onClick={() => onLinkClick(post.id)}>
                 {post.title}
               </h3>
               <p className="all-posts__post-intro">
                 {post.intro}
               </p>
             </div>
-            <div className="all-posts__post-image-wrapper">
+            <div className="all-posts__post-image-wrapper" onClick={() => onLinkClick(post.id)}>
               <img
                 className="all-posts__post-image"
                 src={post.imageURL}

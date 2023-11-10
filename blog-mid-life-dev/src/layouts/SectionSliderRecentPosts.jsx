@@ -5,7 +5,7 @@ import { usePosts } from "../utils/usePosts";
 
 import "./styles/SectionSliderRecentPosts.css";
 
-const SectionSliderRecentPosts = () => {
+const SectionSliderRecentPosts = ({ onLinkClick }) => {
   const { posts } = usePosts();
 
   const displayedPosts = posts.slice(0, 3);
@@ -36,16 +36,16 @@ const SectionSliderRecentPosts = () => {
                 "dd MMM yyyy"
               )}
             </div>
-            <h3 className="recent-posts__post-title">
+            <a href="#" onClick={() => onLinkClick(post.id)}><h3 className="recent-posts__post-title">
               {post.title}
             </h3>
-            <div className="recent-posts__post-image-wrapper">
-              <img
-                className="recent-posts__post-image"
-                src={post.imageURL}
-                alt=""
-              />
-            </div>
+              <div className="recent-posts__post-image-wrapper">
+                <img
+                  className="recent-posts__post-image"
+                  src={post.imageURL}
+                  alt=""
+                />
+              </div></a>
           </div>
         ))}
       </Flickity>

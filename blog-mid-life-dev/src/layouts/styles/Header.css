@@ -65,8 +65,12 @@
         margin-bottom: 1rem;
     }
 
+    .header__svg-wrapper img {
+        margin-left: -1.5rem !important;
+    }
+
     .header__svg-wrapper img,
-    .header__title{
+    .header__title {
         margin: auto;
     }
 }

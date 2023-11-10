@@ -14,11 +14,17 @@ const Post = ({ onLinkClick, selectedPostId }) => {
     <div className="post__post-wrapper">
       <p className="post__post-author">{post.author}</p>
       <h2 className="post__post-title">{post.title}</h2>
-      <p className="post__post-date">{format(
-        new Date(post.publicationDate),
-        "dd MMM yyyy"
-      )}
+      <p className="post__post-date">
+        {format(new Date(post.publicationDate), "dd MMM yyyy")}
       </p>
+      <a
+        className="post__post-back"
+        href="#"
+        onClick={() => onLinkClick()}
+      >
+        {<HiOutlineChevronDoubleLeft />} Go Back
+      </a>
+
       <div className="post__post-image-wrapper">
         <img
           className="post__post-image"

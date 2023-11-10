@@ -9,7 +9,7 @@
 }
 
 :root {
-    font-size: 18px;
+    font-size: 1.25rem;
     --background-primary: #eeedec;
     --background-secondary: #bebcbc;
     --shadow-opaque: rgba(17, 16, 15, 0.3);
@@ -19,6 +19,12 @@
     --accent-subtle: #c3b3e7;
 
     --transition-preset: all 200ms ease-in-out;
+}
+
+@media (max-width: 600px) {
+    :root {
+        font-size: 0.9rem !important;
+    }
 }
 
 .dark {
