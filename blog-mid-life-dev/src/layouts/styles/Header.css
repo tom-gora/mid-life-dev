@@ -44,6 +44,17 @@
     }
 }
 
+@media (width <= 1200px) {
+    .header__title-wrapper {
+        padding-inline: 0;
+    }
+
+    .header__svg-wrapper img {
+    margin-left: 0;
+}
+
+}
+
 @media (width<=900px) {
     .header__title-wrapper,
     .header__blog-name {
@@ -52,10 +63,6 @@
         flex-direction: column;
         white-space: pre-line;
         text-align: center;
-    }
-
-    .header__title-wrapper {
-        padding-inline: 0;
     }
 
     .header__svg-wrapper {
