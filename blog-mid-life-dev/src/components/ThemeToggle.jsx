@@ -5,13 +5,20 @@ import { GiPlainCircle } from "react-icons/gi";
 import "./styles/ThemeToggle.css";
 
 const ThemeToggle = ({ toggleDarkMode, isDarkMode }) => {
+  const handleThemeChange = () => {
+    toggleDarkMode();
+    localStorage.setItem(
+      "mldBlogThemePreference",
+      isDarkMode ? "light" : "dark"
+    );
+  };
   return (
     <label htmlFor="theme-toggle__theme-input">
       <input
         type="checkbox"
         id="theme-toggle__theme-input"
         checked={isDarkMode}
-        onChange={toggleDarkMode}
+        onChange={handleThemeChange}
       />
       <div className="theme-toggle__toggle-switch">
         <div>{<IoMoonOutline />}</div>

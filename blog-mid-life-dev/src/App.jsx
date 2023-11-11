@@ -12,12 +12,21 @@ import Footer from "./layouts/Footer";
 import MobileMenuToggle from "./components/MobileMenuToggle";
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [showNavigationShadow, setShowNavigationShadow] = useState(false);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth >= 600);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showPost, setShowPost] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+
+  const storedThemePreference = localStorage.getItem(
+    "mldBlogThemePreference"
+  );
+
+  const getTheme = () => {
+    return storedThemePreference === "dark";
+  }
+
+  const [isDarkMode, setIsDarkMode] = useState(getTheme());
 
   const handleMobileMenuOpen = () => {
     setIsMobileMenuOpen((prevIsMobileMenuOpen) => !prevIsMobileMenuOpen);
@@ -100,10 +109,13 @@ const App = () => {
         ) : null}
         {showAbout ? null : (
           <>
-            {showPost ? null : <SectionSliderRecentPosts
-              onLinkClick={(postId) =>
-                handlePostClick(postId)
-              } />}
+            {showPost ? null : (
+              <SectionSliderRecentPosts
+                onLinkClick={(postId) =>
+                  handlePostClick(postId)
+                }
+              />
+            )}
             {showPost ? null : (
               <SectionAllPosts
                 onLinkClick={(postId) =>
