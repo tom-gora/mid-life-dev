@@ -12,34 +12,62 @@ import Footer from "./layouts/Footer";
 import MobileMenuToggle from "./components/MobileMenuToggle";
 
 const App = () => {
-  const [showNavigationShadow, setShowNavigationShadow] = useState(false);
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth >= 600);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [showPost, setShowPost] = useState(false);
-  const [showAbout, setShowAbout] = useState(false);
+  // states:
 
+  // state for adding bottom box shadow to navbar when scrolled away from the top
+  const [showNavigationShadow, setShowNavigationShadow] = useState(false);
+  //state to manage changes that need toggling with JS on the smalles responsive breakpoint
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth >= 600);
+  // sate to handle position of mobile version of menu
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // state to handle showing and hiding post view
+  const [showPost, setShowPost] = useState(false);
+  // state to handle showing and hiding about view
+  const [showAbout, setShowAbout] = useState(false);
+  // state to handle showing and hiding about view
+  const [showHeader, setShowHeader] = useState(true);
+  // state to handle dark mode with storing and and retrieving it from local storage
+  // attempt to extract value from local storage
   const storedThemePreference = localStorage.getItem(
     "mldBlogThemePreference"
   );
-
   const getTheme = () => {
+    // if dark then correctly true, if light or null then false
     return storedThemePreference === "dark";
-  }
-
+  };
   const [isDarkMode, setIsDarkMode] = useState(getTheme());
+  // state handling clicked post
+  const [selectedPostId, setSelectedPostId] = useState(null);
+
+  // state handlers
 
   const handleMobileMenuOpen = () => {
     setIsMobileMenuOpen((prevIsMobileMenuOpen) => !prevIsMobileMenuOpen);
   };
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+  const handlePostClick = (postId) => {
+    setSelectedPostId(postId);
+    setShowHeader(false);
+    setShowPost((prevShowPost) => !prevShowPost);
+  };
+  const handleAboutClick = () => {
+    setShowAbout((prevShowAbout) => !prevShowAbout);
+    setShowHeader(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
+  // side effects
+
+  // observe mobile menu toggle to trigger state change
   useEffect(() => {
     const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
     mobileMenuToggle.addEventListener("click", handleMobileMenuOpen);
-
     return () =>
       mobileMenuToggle.removeEventListener("click", handleMobileMenuOpen);
   }, []);
-
+  // observe viewport widtht to trigger state change for the smallest breakpoint
   useEffect(() => {
     const handleResize = () => {
       setIsMobileView(window.innerWidth >= 600);
@@ -47,7 +75,7 @@ const App = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
+  // observe if user scrolled 20px away from top to triugger side effect (state change)
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 20) {
@@ -61,74 +89,56 @@ const App = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
+  // apart from toggling app wrapper class, make document's body have the appropriate color manually
   useEffect(() => {
     document.body.style.background = isDarkMode ? "#080c1f" : "#eeedec";
   }, [isDarkMode]);
 
-  const [selectedPostId, setSelectedPostId] = useState(null);
-
-  const handlePostClick = (postId) => {
-    setSelectedPostId(postId);
-    setShowPost((prevShowPost) => !prevShowPost);
-  };
-
   return (
     <div className={`main ${isDarkMode ? "dark" : ""} `}>
       <div id="top"></div>
-      {
-        <MobileMenuToggle
-          isMobileMenuOpen={isMobileMenuOpen}
-          isMobileView={isMobileView}
-        />
-      }
+      <MobileMenuToggle
+        isMobileMenuOpen={isMobileMenuOpen}
+        isMobileView={isMobileView}
+      />
       <Navbar
         isMobileView={isMobileView}
         toggleDarkMode={toggleDarkMode}
         isDarkMode={isDarkMode}
         showNavigationShadow={showNavigationShadow}
         isMobileMenuOpen={isMobileMenuOpen}
-        onAboutClick={() =>
-          setShowAbout((prevShowAbout) => !prevShowAbout)
-        }
+        onAboutClick={handleAboutClick}
         showAbout={showAbout}
       />
       <PostProvider>
-        {showPost ? null : <Header />}
+        {showHeader ? (<Header />) : null}
         {showAbout ? (
           <About
-            onAboutClick={() =>
-              setShowAbout((prevShowAbout) => !prevShowAbout)
-            }
+            onAboutClick={handleAboutClick}
             showAbout={showAbout}
           />
         ) : null}
-        {showAbout ? null : (
+        {!showAbout && (
           <>
-            {showPost ? null : (
-              <SectionSliderRecentPosts
-                onLinkClick={(postId) =>
-                  handlePostClick(postId)
-                }
-              />
-            )}
-            {showPost ? null : (
-              <SectionAllPosts
-                onLinkClick={(postId) =>
-                  handlePostClick(postId)
-                }
-              />
-            )}
             {showPost ? (
               <Post
                 selectedPostId={selectedPostId}
                 onLinkClick={handlePostClick}
               />
-            ) : null}
+            ) : (
+              <>
+                <SectionSliderRecentPosts
+                  onLinkClick={(postId) =>
+                    handlePostClick(postId)
+                  }
+                />
+                <SectionAllPosts
+                  onLinkClick={(postId) =>
+                    handlePostClick(postId)
+                  }
+                />
+              </>
+            )}
           </>
         )}
       </PostProvider>
