@@ -51,6 +51,7 @@ const App = () => {
     setSelectedPostId(postId);
     setShowHeader(false);
     setShowPost((prevShowPost) => !prevShowPost);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const handleAboutClick = () => {
     setShowAbout((prevShowAbout) => !prevShowAbout);

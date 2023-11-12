@@ -11,7 +11,9 @@ const Footer = () => {
                 <p>&copy; {new Date().getFullYear()} Tomasz Gora @ UWS</p>
                 <ul className="footer__links">
                     <li>
-                        <a href="#top">{<FiChevronsUp size="2.5rem" />}</a>
+                        <a onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            {<FiChevronsUp size="2.5rem" />}
+                        </a>
                     </li>
                     <li>
                         <a href="https://tomgora.online/">
