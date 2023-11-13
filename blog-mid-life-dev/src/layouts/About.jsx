@@ -6,7 +6,13 @@ const About = ({ setView, previousView }) => {
   return (
     <>
       <h2 className="about__title">About Me:</h2>
-      <a className="about__back" onClick={() => setView(previousView === "about" ? "home" : previousView)}>
+      <a
+        style={{ cursor: "pointer" }}
+        className="about__back"
+        onClick={() =>
+          setView(previousView === "about" ? "home" : previousView)
+        }
+      >
         {<HiOutlineChevronDoubleLeft />} Go Back
       </a>
       <p className="about__content">
@@ -28,7 +34,13 @@ const About = ({ setView, previousView }) => {
         make me a better person and a better developer. Welcome and
         enjoy!
       </p>
-      <a className="about__back" onClick={() => setView(previousView === "post" ? "home" : previousView)}>
+      <a
+        style={{ cursor: "pointer" }}
+        className="about__back"
+        onClick={() =>
+          setView(previousView === "post" ? "home" : previousView)
+        }
+      >
         {<HiOutlineChevronDoubleLeft />} Go Back
       </a>
     </>

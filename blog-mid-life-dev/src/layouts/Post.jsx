@@ -18,6 +18,7 @@ const Post = ({ selectedPostId, setView, previousView }) => {
         {format(new Date(post.publicationDate), "dd MMM yyyy")}
       </p>
       <a
+        style={{ cursor: "pointer" }}
         className="post__post-back"
         onClick={() => setView(previousView === "post" ? "home" : previousView)}
       >
@@ -35,6 +36,7 @@ const Post = ({ selectedPostId, setView, previousView }) => {
         <ReactMarkdown children={post.content}></ReactMarkdown>
       </div>
       <a
+        style={{ cursor: "pointer" }}
         className="post__post-back"
         onClick={() => setView(previousView === "post" ? "home" : previousView)}
       >

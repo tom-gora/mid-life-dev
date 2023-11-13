@@ -9,6 +9,7 @@
     position: fixed;
     top: 0;
     right: 0;
+    gap: 2rem;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -18,11 +19,13 @@
 }
 
 .navbar .navbar__name {
+    width: max-content;
     background: var(--text);
     color: var(--background-primary);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
 }
+
 
 .navbar_right-segment {
     display: flex;

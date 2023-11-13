@@ -2,6 +2,7 @@ import "./styles/Navbar.css";
 import ThemeToggle from "../components/ThemeToggle";
 
 const Navbar = ({
+  setIsMobileMenuOpen,
   isMobileView,
   isDarkMode,
   toggleDarkMode,
@@ -21,15 +22,16 @@ const Navbar = ({
         ...(isMobileMenuOpen ? { right: "0" } : { right: "-120%" }),
       }}
     >
-      <div className="navbar__name">Tomasz Gora</div>
+      <div className="navbar__name">Tom Gora</div>
       <div className="navbar_right-segment">
         <ul className="navbar__links">
           <li>
             <a
               style={{ cursor: "pointer" }}
-              onClick={
-                currentView === "home" ? null : onHomeClick
-              }
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                (currentView !== "home" && onHomeClick) && onHomeClick();
+              }}
             >
               Home
             </a>
@@ -37,9 +39,12 @@ const Navbar = ({
           <li>
             <a
               style={{ cursor: "pointer" }}
-              onClick={
-                currentView === "about" ? null : onAboutClick
-              }
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                currentView !== "about" &&
+                  onAboutClick &&
+                  onAboutClick();
+              }}
             >
               About
             </a>
