@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 
+// create context to provide posts data to components
 const PostContext = createContext();
 
 export const PostProvider = ({ children }) => {

@@ -8,7 +8,8 @@ const Navbar = ({
   showNavigationShadow,
   isMobileMenuOpen,
   onAboutClick,
-  showAbout,
+  onHomeClick,
+  currentView,
 }) => {
   return (
     <div
@@ -24,12 +25,21 @@ const Navbar = ({
       <div className="navbar_right-segment">
         <ul className="navbar__links">
           <li>
-            <a href="https://tomgora.online/blog">Home</a>
+            <a
+              style={{ cursor: "pointer" }}
+              onClick={
+                currentView === "home" ? null : onHomeClick
+              }
+            >
+              Home
+            </a>
           </li>
           <li>
             <a
-              href="#"
-              onClick={() => !showAbout && onAboutClick()}
+              style={{ cursor: "pointer" }}
+              onClick={
+                currentView === "about" ? null : onAboutClick
+              }
             >
               About
             </a>

@@ -5,7 +5,7 @@ import { format } from "date-fns";
 import { usePosts } from "../utils/usePosts";
 import { HiOutlineChevronDoubleLeft } from "react-icons/hi2";
 
-const Post = ({ onLinkClick, selectedPostId }) => {
+const Post = ({ selectedPostId, setView, previousView }) => {
   const { posts } = usePosts();
 
   const post = posts.find((post) => post.id === selectedPostId);
@@ -19,8 +19,7 @@ const Post = ({ onLinkClick, selectedPostId }) => {
       </p>
       <a
         className="post__post-back"
-        href="#"
-        onClick={() => onLinkClick()}
+        onClick={() => setView(previousView === "post" ? "home" : previousView)}
       >
         {<HiOutlineChevronDoubleLeft />} Go Back
       </a>
@@ -37,8 +36,7 @@ const Post = ({ onLinkClick, selectedPostId }) => {
       </div>
       <a
         className="post__post-back"
-        href="#"
-        onClick={() => onLinkClick()}
+        onClick={() => setView(previousView === "post" ? "home" : previousView)}
       >
         {<HiOutlineChevronDoubleLeft />} Go Back
       </a>

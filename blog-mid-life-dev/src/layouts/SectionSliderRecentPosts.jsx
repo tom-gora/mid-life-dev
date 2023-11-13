@@ -5,7 +5,7 @@ import { usePosts } from "../utils/usePosts";
 
 import "./styles/SectionSliderRecentPosts.css";
 
-const SectionSliderRecentPosts = ({ onLinkClick }) => {
+const SectionSliderRecentPosts = ({ onPostClick }) => {
   const { posts } = usePosts();
 
   const displayedPosts = posts.slice(0, 3);
@@ -36,7 +36,7 @@ const SectionSliderRecentPosts = ({ onLinkClick }) => {
                 "dd MMM yyyy"
               )}
             </div>
-            <a href="#" onClick={() => onLinkClick(post.id)}><h3 className="recent-posts__post-title">
+            <a href="#" onClick={() => onPostClick(post.id)}><h3 className="recent-posts__post-title">
               {post.title}
             </h3>
               <div className="recent-posts__post-image-wrapper">

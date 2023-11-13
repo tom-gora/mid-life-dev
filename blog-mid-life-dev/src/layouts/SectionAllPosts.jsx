@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import { usePosts } from "../utils/usePosts";
 import "./styles/SectionAllPosts.css";
 import { HiOutlineChevronDoubleRight } from "react-icons/hi2";
@@ -7,20 +7,30 @@ import { format } from "date-fns";
 import { TbSquareChevronLeftFilled } from "react-icons/tb";
 import { TbSquareChevronRightFilled } from "react-icons/tb";
 
-const SectionAllPosts = ({ onLinkClick }) => {
+const SectionAllPosts = ({ onPostClick }) => {
   const { posts } = usePosts();
+  // states uses by react-paginate
   const [currentPage, setCurrentPage] = useState(0);
   const [postsPerPage] = useState(4);
 
+  // state to make sure to execute below effect only when user clicks on pagination menu, not on every component render
+  const [shouldScrollToBottom, setShouldScrollToBottom] = useState(false);
 
-  useEffect(() => {
-    window.scrollTo(0, document.body.scrollHeight);
-  }, [currentPage]);
+  // making sure when user interacting with the pagination menu the bottom of the page where menu is kept in view
+  // regardless of changes to the viewport height
+  useLayoutEffect(() => {
+    if (shouldScrollToBottom) {
+      window.scrollTo(0, document.body.scrollHeight);
+      setShouldScrollToBottom(false);
+    }
+  }, [shouldScrollToBottom, currentPage]);
 
+  // pagination handling as per react-paginate docs
   const handlePageChange = ({ selected }) => {
     setCurrentPage(selected);
+    console.log("scrolling to the bottom");
+    setShouldScrollToBottom(true);
   };
-
   const displayedPosts = posts.slice(
     currentPage * postsPerPage,
     (currentPage + 1) * postsPerPage
@@ -40,21 +50,27 @@ const SectionAllPosts = ({ onLinkClick }) => {
                   "dd MMM yyyy"
                 )}
               </div>
-              <h3 className="all-posts__post-title" onClick={() => onLinkClick(post.id)}>
+              <h3
+                className="all-posts__post-title"
+                onClick={() => onPostClick(post.id)}
+              >
                 {post.title}
               </h3>
               <p className="all-posts__post-intro">
                 {post.intro}
               </p>
             </div>
-            <div className="all-posts__post-image-wrapper" onClick={() => onLinkClick(post.id)}>
+            <div
+              className="all-posts__post-image-wrapper"
+              onClick={() => onPostClick(post.id)}
+            >
               <img
                 className="all-posts__post-image"
                 src={post.imageURL}
                 alt=""
               />
             </div>
-            <a href="#" onClick={() => onLinkClick(post.id)}>
+            <a href="#" onClick={() => onPostClick(post.id)}>
               Read More {<HiOutlineChevronDoubleRight />}
             </a>
           </div>

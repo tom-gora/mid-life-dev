@@ -2,11 +2,13 @@ import "./styles/About.css";
 
 import { HiOutlineChevronDoubleLeft } from "react-icons/hi2";
 
-
-const About = ({ onAboutClick, showAbout }) => {
+const About = ({ setView, previousView }) => {
   return (
     <>
       <h2 className="about__title">About Me:</h2>
+      <a className="about__back" onClick={() => setView(previousView === "about" ? "home" : previousView)}>
+        {<HiOutlineChevronDoubleLeft />} Go Back
+      </a>
       <p className="about__content">
         Hi, I’m a software development undergraduate who is passionate
         about web development. I have always been fascinated by
@@ -26,11 +28,7 @@ const About = ({ onAboutClick, showAbout }) => {
         make me a better person and a better developer. Welcome and
         enjoy!
       </p>
-      <a
-        className="about__back"
-        href="#"
-        onClick={() => onAboutClick()}
-      >
+      <a className="about__back" onClick={() => setView(previousView === "post" ? "home" : previousView)}>
         {<HiOutlineChevronDoubleLeft />} Go Back
       </a>
     </>

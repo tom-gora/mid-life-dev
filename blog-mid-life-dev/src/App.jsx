@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { PostProvider } from "./utils/usePosts";
 import Navbar from "./layouts/Navbar";
 import Header from "./layouts/Header";
@@ -20,12 +20,11 @@ const App = () => {
   const [isMobileView, setIsMobileView] = useState(window.innerWidth >= 600);
   // sate to handle position of mobile version of menu
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // state to handle showing and hiding post view
-  const [showPost, setShowPost] = useState(false);
-  // state to handle showing and hiding about view
-  const [showAbout, setShowAbout] = useState(false);
-  // state to handle showing and hiding about view
-  const [showHeader, setShowHeader] = useState(true);
+  // state to handle page view
+  const [currentView, setCurrentView] = useState("home");
+  // state to store previous view
+  const [previousView, setPreviousView] = useState(null);
+
   // state to handle dark mode with storing and and retrieving it from local storage
   // attempt to extract value from local storage
   const storedThemePreference = localStorage.getItem(
@@ -48,15 +47,16 @@ const App = () => {
     setIsDarkMode(!isDarkMode);
   };
   const handlePostClick = (postId) => {
+    setPreviousView(currentView);
     setSelectedPostId(postId);
-    setShowHeader(false);
-    setShowPost((prevShowPost) => !prevShowPost);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    setCurrentView("post");
   };
   const handleAboutClick = () => {
-    setShowAbout((prevShowAbout) => !prevShowAbout);
-    setShowHeader(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    setPreviousView(currentView);
+    setCurrentView("about");
+  };
+  const handleHomeClick = () => {
+    setCurrentView("home");
   };
 
   // side effects
@@ -90,6 +90,10 @@ const App = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  // after re-render changing the view scroll to the top
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [currentView]);
   // apart from toggling app wrapper class, make document's body have the appropriate color manually
   useEffect(() => {
     document.body.style.background = isDarkMode ? "#080c1f" : "#eeedec";
@@ -108,41 +112,40 @@ const App = () => {
         isDarkMode={isDarkMode}
         showNavigationShadow={showNavigationShadow}
         isMobileMenuOpen={isMobileMenuOpen}
+        currentView={currentView}
         onAboutClick={handleAboutClick}
-        showAbout={showAbout}
+        onHomeClick={handleHomeClick}
+        onPostClick={(postId) => handlePostClick(postId)}
       />
       <PostProvider>
-        {showHeader ? (<Header />) : null}
-        {showAbout ? (
-          <About
-            onAboutClick={handleAboutClick}
-            showAbout={showAbout}
-          />
-        ) : null}
-        {!showAbout && (
+        {currentView === "home" && (
           <>
-            {showPost ? (
-              <Post
-                selectedPostId={selectedPostId}
-                onLinkClick={handlePostClick}
-              />
-            ) : (
-              <>
-                <SectionSliderRecentPosts
-                  onLinkClick={(postId) =>
-                    handlePostClick(postId)
-                  }
-                />
-                <SectionAllPosts
-                  onLinkClick={(postId) =>
-                    handlePostClick(postId)
-                  }
-                />
-              </>
-            )}
+            <Header />
+            <SectionSliderRecentPosts
+              onPostClick={(postId) => handlePostClick(postId)}
+            />
+            <SectionAllPosts
+              onPostClick={(postId) => handlePostClick(postId)}
+            />
           </>
         )}
+        {currentView === "post" && (
+          <Post
+            selectedPostId={selectedPostId}
+            setView={setCurrentView}
+            previousView={previousView}
+          />
+        )}
       </PostProvider>
+      {currentView === "about" && (
+        <>
+          <Header />
+          <About
+            setView={setCurrentView}
+            previousView={previousView}
+          />
+        </>
+      )}
       <Footer />
     </div>
   );
