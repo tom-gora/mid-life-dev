@@ -28,7 +28,12 @@ const Post = ({ selectedPostId, setView, previousView }) => {
       <div className="post__post-image-wrapper">
         <img
           className="post__post-image"
-          src={post.imageURL}
+          src={`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.small.url}`}
+          srcSet={`${`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.small.url}`} 600w,
+        ${`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.medium.url}`} 900w,
+        ${`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.large.url}`} 1200w`}
+          sizes="(max-width: 600px) 600px, (max-width: 900px) 900px, 1200px"
+
           alt={post.title}
         />
       </div>
