@@ -6,7 +6,7 @@ const PostContext = createContext();
 export const PostProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    const postsStrapiEndpoint = "https://admin.tomgora.online/api/posts";
+    const postsStrapiEndpoint = "https://admin.tomgora.online/api/posts/?populate=*";
     const token = import.meta.env.VITE_REACT_APP_STRAPI_TOKEN;
     const headers = {
       Authorization: `Bearer ${token}`,

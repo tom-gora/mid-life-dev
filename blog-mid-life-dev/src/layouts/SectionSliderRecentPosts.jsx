@@ -36,16 +36,22 @@ const SectionSliderRecentPosts = ({ onPostClick }) => {
                 "dd MMM yyyy"
               )}
             </div>
-            <a href="#" onClick={() => onPostClick(post.id)}><h3 className="recent-posts__post-title">
-              {post.title}
-            </h3>
+            <a href="#" onClick={() => onPostClick(post.id)}>
+              <h3 className="recent-posts__post-title">
+                {post.title}
+              </h3>
               <div className="recent-posts__post-image-wrapper">
                 <img
                   className="recent-posts__post-image"
-                  src={post.imageURL}
+                  src={`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.thumbnail.url}`}
+                  srcSet={`${`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.thumbnail.url}`} 600w,
+        ${`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.small.url}`} 900w,
+        ${`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.medium.url}`} 1200w`}
+                  sizes="(max-width: 600px) 600px, (max-width: 900px) 900px, 1200px"
                   alt=""
                 />
-              </div></a>
+              </div>
+            </a>
           </div>
         ))}
       </Flickity>

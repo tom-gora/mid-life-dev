@@ -41,7 +41,6 @@ const App = () => {
   // state handlers
 
   const handleMobileMenuOpen = () => {
-    console.log("changing mobile menu state");
     setIsMobileMenuOpen((prevIsMobileMenuOpen) => !prevIsMobileMenuOpen);
   };
   const toggleDarkMode = () => {

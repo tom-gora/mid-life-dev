@@ -28,7 +28,6 @@ const SectionAllPosts = ({ onPostClick }) => {
   // pagination handling as per react-paginate docs
   const handlePageChange = ({ selected }) => {
     setCurrentPage(selected);
-    console.log("scrolling to the bottom");
     setShouldScrollToBottom(true);
   };
   const displayedPosts = posts.slice(
@@ -66,8 +65,12 @@ const SectionAllPosts = ({ onPostClick }) => {
             >
               <img
                 className="all-posts__post-image"
-                src={post.imageURL}
+                src={`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.thumbnail.url}`}
+                srcSet={`${`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.thumbnail.url}`} 600w,
+        ${`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.small.url}`} 900w,
+        ${`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.medium.url}`} 1200w`}
                 alt=""
+                sizes="(max-width: 600px) 600px, (max-width: 900px) 900px, 1200px"
               />
             </div>
             <a href="#" onClick={() => onPostClick(post.id)}>
