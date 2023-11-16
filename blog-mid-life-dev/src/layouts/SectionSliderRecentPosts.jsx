@@ -36,7 +36,7 @@ const SectionSliderRecentPosts = ({ onPostClick }) => {
                 "dd MMM yyyy"
               )}
             </div>
-            <a href="#" onClick={() => onPostClick(post.id)}>
+            <a style={{ cursor: "pointer" }} onClick={() => onPostClick(post.id)}>
               <h3 className="recent-posts__post-title">
                 {post.title}
               </h3>
@@ -48,7 +48,7 @@ const SectionSliderRecentPosts = ({ onPostClick }) => {
         ${`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.small.url}`} 900w,
         ${`https://admin.tomgora.online${post.featuredImage.data.attributes.formats.medium.url}`} 1200w`}
                   sizes="(max-width: 600px) 600px, (max-width: 900px) 900px, 1200px"
-                  alt=""
+                  alt={post.featuredImage.data.attributes.alternativeText}
                 />
               </div>
             </a>

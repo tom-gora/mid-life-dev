@@ -27,10 +27,13 @@ const Navbar = ({
         <ul className="navbar__links">
           <li>
             <a
+              role="button"
               style={{ cursor: "pointer" }}
               onClick={() => {
                 setIsMobileMenuOpen(false);
-                (currentView !== "home" && onHomeClick) && onHomeClick();
+                currentView !== "home" &&
+                  onHomeClick &&
+                  onHomeClick();
               }}
             >
               Home
@@ -38,6 +41,7 @@ const Navbar = ({
           </li>
           <li>
             <a
+              role="button"
               style={{ cursor: "pointer" }}
               onClick={() => {
                 setIsMobileMenuOpen(false);
@@ -50,7 +54,9 @@ const Navbar = ({
             </a>
           </li>
           <li>
-            <a href="https://tomgora.online">Projects</a>
+            <a href="https://tomgora.online" role="button">
+              Projects
+            </a>
           </li>
         </ul>
         <ThemeToggle
