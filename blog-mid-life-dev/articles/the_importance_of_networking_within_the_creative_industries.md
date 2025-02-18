@@ -11,7 +11,8 @@ According to Merriam-Webster, networking is “the exchange of information or se
 Networking is especially important in the creative industries, as it helps you advance your career more effectively and efficiently, by allowing you to access opportunities, showcase your work and build vital relationships.
 
 ### Networking for web developers
-![tech conference](https://admin.tomgora.online/uploads/tech_conference_62be279167.jpg)
+
+![tech conference](https://strapi.tomgora.online/uploads/tech_conference_62be279167.jpg)
 
 As a web developer, I believe that networking is not only a desirable skill, but also a necessary one, for the success and reputation of my career and the industry. Web development is a complex and dynamic field that involves creating, designing, and maintaining websites and web applications, using various technologies, tools, and languages. Web development also requires working with different clients, users, and stakeholders, who have different needs, preferences, and expectations. Therefore, web development poses some specific challenges and opportunities for networking, such as:
 
@@ -21,8 +22,9 @@ As a web developer, I believe that networking is not only a desirable skill, but
 
 ### How to network effectively?
 
-![linkedin meme](https://admin.tomgora.online/uploads/linkedin_meme_7d41edd67d.png)
+![linkedin meme](https://strapi.tomgora.online/uploads/linkedin_meme_7d41edd67d.png)
 Considering how important networking is for web developers, let’s figure out how we can network effectively and efficiently. There are many ways and platforms to network, both online and offline, such as:
+
 - LinkedIn: LinkedIn is a popular and powerful online platform for professional networking, where you can create and update your profile, showcase your work and skills, connect with other professionals, join groups and communities, follow influencers and organizations, and search and apply for jobs.
 - Meetup groups: Meetup groups are local and informal gatherings of people who share similar or complementary interests, passions, or hobbies, where you can attend talks, presentations, discussions, and social activities, and meet and interact with other like-minded people.
 - Hackathons and tech conferences: Those are more technically oriented, collaborative events, where you can meet real passionate professionals eager to share interests and knowledge.
@@ -33,6 +35,5 @@ However, networking is not only about where and how you network, but also about 
 - Be prepared and proactive: When networking, it is important to be prepared and proactive, and make a good first impression. This means that you should have a clear and concise introduction of yourself, your work, and your goals, and be ready to share it with others. You should also have a portfolio or a website that showcases your work and skills, and be ready to share it with others. You should also initiate and engage in conversations with others, and ask relevant and interesting questions, rather than waiting for others to approach you or talk to you.
 - Help others and add value: When networking, it is important to help others and add value, and make a lasting impression. This means that you should offer your help, advice, feedback, or support to others, when they need it or ask for it, and show your generosity and goodwill. You should also share your knowledge, expertise, or resources with others, and show your value and credibility. You should also follow up with others, and keep in touch with them, and show your interest and appreciation.
 - Be authentic and respectful: When networking, it is important to be authentic and respectful, and make a positive impression. This means that you should be yourself, and express your personality, opinions, and passions, and show your uniqueness and diversity. You should also respect others, and their personality, opinions, and passions, and show your openness and curiosity. You should also be honest, trustworthy, and ethical, and show your integrity and professionalism.
-
 
 Networking is a vital and valuable skill for web developers, as it reflects their competence, credibility, and character, in their work and interactions. Networking also benefits the web industry, as it enhances its reputation, quality, and impact, in the economy, culture, and society. Therefore, web developers should strive to network effectively and efficiently, by following the platforms, methods, and tips discussed in this blog post, as well as the ones that are specific to their profession, context, and situation. By doing so, web developers can not only achieve their personal and professional goals, but also contribute to the advancement and improvement of the web and the world.
